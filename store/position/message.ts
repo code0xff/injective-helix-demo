@@ -36,7 +36,7 @@ export const closePosition = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnDerivativesAction()
+  appStore.validateGeoIpBasedOnDerivativesAction()
   await walletStore.validate()
 
   const orderType =
@@ -81,7 +81,7 @@ export const closeAllPosition = async (
     return
   }
 
-  await appStore.validateGeoIpBasedOnDerivativesAction()
+  appStore.validateGeoIpBasedOnDerivativesAction()
   await walletStore.validate()
 
   const formattedPositions = positions
@@ -168,7 +168,7 @@ export const closePositionAndReduceOnlyOrders = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnDerivativesAction()
+  appStore.validateGeoIpBasedOnDerivativesAction()
   await walletStore.validate()
 
   const orderType =
@@ -215,7 +215,7 @@ export const addMarginToPosition = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnDerivativesAction()
+  appStore.validateGeoIpBasedOnDerivativesAction()
   await walletStore.validate()
 
   const messages = MsgIncreasePositionMargin.fromJSON({

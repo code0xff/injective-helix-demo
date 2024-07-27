@@ -170,7 +170,7 @@ export const submitLimitOrder = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnDerivativesAction()
+  appStore.validateGeoIpBasedOnDerivativesAction()
   await walletStore.validate()
 
   const messages = MsgCreateDerivativeLimitOrder.fromJSON({
@@ -230,7 +230,7 @@ export const submitStopLimitOrder = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnDerivativesAction()
+  appStore.validateGeoIpBasedOnDerivativesAction()
   await walletStore.validate()
 
   const msgTriggerPrice = derivativePriceToChainPriceToFixed({
@@ -301,7 +301,7 @@ export const submitMarketOrder = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnDerivativesAction()
+  appStore.validateGeoIpBasedOnDerivativesAction()
   await walletStore.validate()
 
   const isTpslBuy = ![OrderSide.Buy, OrderSide.BuyPO].includes(orderSide)
@@ -402,7 +402,7 @@ export const submitStopMarketOrder = async ({
   }
 
   await walletStore.validate()
-  await appStore.validateGeoIpBasedOnDerivativesAction()
+  appStore.validateGeoIpBasedOnDerivativesAction()
 
   const msgPrice = derivativePriceToChainPriceToFixed({
     value: price.toFixed(),

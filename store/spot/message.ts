@@ -109,7 +109,7 @@ export const submitLimitOrder = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnSpotAction(market)
+  appStore.validateGeoIpBasedOnSpotAction(market)
   await walletStore.validate()
 
   const priceToFixed = spotPriceToChainPriceToFixed({
@@ -185,7 +185,7 @@ export const submitMarketOrder = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnSpotAction(market)
+  appStore.validateGeoIpBasedOnSpotAction(market)
   await walletStore.validate()
 
   const priceToFixed = spotPriceToChainPriceToFixed({
@@ -259,7 +259,7 @@ export const submitStopLimitOrder = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnSpotAction(market)
+  appStore.validateGeoIpBasedOnSpotAction(market)
   await walletStore.validate()
 
   const messages = MsgCreateSpotLimitOrder.fromJSON({
@@ -315,7 +315,7 @@ export const submitStopMarketOrder = async ({
     return
   }
 
-  await appStore.validateGeoIpBasedOnSpotAction(market)
+  appStore.validateGeoIpBasedOnSpotAction(market)
   await walletStore.validate()
 
   const messages = MsgCreateSpotMarketOrder.fromJSON({

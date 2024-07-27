@@ -202,7 +202,7 @@ export const useAppStore = defineStore('app', {
        ** in a country from the restricted list
        */
 
-      await displayVPNOrProxyUsageToast()
+      displayVPNOrProxyUsageToast()
 
       const userCountryFromBrowser = await fetchUserCountryFromBrowser()
 
